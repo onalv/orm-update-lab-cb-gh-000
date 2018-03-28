@@ -30,7 +30,7 @@ class Student
   end
 
   def save
-    
+
   end
 
   def self.create
@@ -42,7 +42,7 @@ class Student
   end
 
   def self.find_by_name
-    
+
   end
 
   def update
