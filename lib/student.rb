@@ -57,11 +57,13 @@ class Student
   end
 
   def update
-    if self.id
-      self.save
-    else
+    sql = <<-SQL
+      UPDATE students
+      SET name = ?, grade = ? 
+      WHERE id = ? 
+    SQL
 
-    end
+    DB[:conn].execute(sql, self.name, self.grade)
   end
 
 end
